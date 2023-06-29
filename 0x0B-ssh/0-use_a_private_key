@@ -1,19 +1,8 @@
 #!/usr/bin/env bash
+#Server details:
+#server="34.138.32.248"
+#private_key="~/.ssh/school"
+#username="ubuntu"
+# Connects to server 34.138.32.248 with key in ~/.ssh/school
 
-#Server details
-server="34.138.32.248"
-private_key="~/.ssh/school"
-username="ubuntu"
-
-# Temporarily set the SSH_AUTH_SOCK environment variable
-export SSH_AUTH_SOCK=$(ssh-agent -c)
-
-# Add the private key to the agent
-ssh-add "$private_key" >/dev/null 2>&1
-
-# SSH connection command
-ssh "$username@$server"
-
-# Cleanup: Stop the ssh-agent and unset the SSH_AUTH_SOCK variable
-ssh-agent -k >/dev/null 2>&1
-unset SSH_AUTH_SOCK
+ssh -i ~/.ssh/school ubuntu@34.138.32.248
