@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+import requests
+
+# Set up the API endpoint and parameters
+api_url = "https://api.datadoghq.com/api/v1/dashboard/"
+api_key = "55de741824f2795e503568e2176844fd"
+api_app_key = "8a573069fb97a574b57764a91d6eb2c92111d379"
+headers = {'Content-type': 'application/json', 'DD-API-KEY': api_key, 'DD-APPLICATION-KEY': api_app_key}
+query_params = {'filter': 'host:187813-web-01'}
+
+# Make the API call to get the host details
+response = requests.get(api_url, headers=headers, params=query_params)
+
+# Check the response status code
+if response.status_code == 200:
+    # Parse the JSON response
+    response_json = response.json()
+    print(response_json)i
