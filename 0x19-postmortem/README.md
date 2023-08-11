@@ -1,6 +1,6 @@
 
-You have a captain's log due before 2023-08-13 (in 2 days)! Log it now!
-You just released the advanced tasks of this project. Have fun!
+![webstack debugging postmorterm](https://github.com/NandiLov/alx-system_engineering-devops/assets/89518874/7bd12c82-4750-4ab0-a3e9-198f75bc73e4)
+
 0x19. Postmortem
 DevOps
 SysAdmin
